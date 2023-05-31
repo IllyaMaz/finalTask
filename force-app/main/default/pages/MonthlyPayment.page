@@ -1,0 +1,18 @@
+<apex:page controller="MonthlyPaymentController" standardStylesheets="false" lightningStylesheets="true"  showHeader="false">
+    <apex:stylesheet value="{!$Resource.SLDS}"/>
+
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:outputField value="{!users.Debt__c}"></apex:outputField>
+                <apex:inputField value="{!payment.Year__c}"></apex:inputField>
+                <apex:inputField value="{!payment.Month__c}"></apex:inputField>
+                <apex:inputField value="{!payment.Sum__c}"></apex:inputField>              
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Pay" action="{!doPay}"></apex:commandButton>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

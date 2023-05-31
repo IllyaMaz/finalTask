@@ -1,0 +1,17 @@
+<apex:page controller="RegistrationController"  standardStylesheets="false" lightningStylesheets="true"  showHeader="false">
+    <apex:stylesheet value="{!$Resource.SLDS}"/>
+    <apex:form >
+    	<apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputField value="{!user.User_Name__c}"  required="true"/>
+                <apex:inputField value="{!user.Password__c}" />
+                <apex:inputField value="{!user.Email__c}" />
+                <apex:inputField value="{!user.State__c}" />
+                <apex:inputField value="{!user.City__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+            	<apex:commandButton value="Registration" action="{!createUser}" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

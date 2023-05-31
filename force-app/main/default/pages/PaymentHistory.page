@@ -1,0 +1,21 @@
+<apex:page controller="PaymentHistoryController" standardStylesheets="false" lightningStylesheets="true"  showHeader="false">
+    <apex:stylesheet value="{!$Resource.SLDS}"/>
+
+    <apex:form>
+        <apex:pageBlock>
+           
+                <apex:pageBlockTable value="{!payments}" var="payment">
+                    <apex:column headerValue="Year" value="{!payment.Year__c}"></apex:column>
+                    <apex:column headerValue="Month">
+                        <apex:outputField value="{!payment.Month__c}"></apex:outputField>
+                    </apex:column>
+                    <apex:column headerValue="Sum">
+                        <apex:outputField value="{!payment.Sum__c}"></apex:outputField>
+                    </apex:column>
+                </apex:pageBlockTable>
+                <apex:commandButton value="Back" action="{!redirectUserPage}"></apex:commandButton>
+            
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

@@ -1,0 +1,18 @@
+<apex:page controller="CreateMeterController" standardStylesheets="false" lightningStylesheets="true"  showHeader="false">
+    <apex:stylesheet value="{!$Resource.SLDS}"/>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputField value="{!meter.Year__c}" required="true"></apex:inputField>
+                <apex:inputField value="{!meter.Month__c}" required="true"></apex:inputField>
+                <apex:inputField value="{!meter.Gas__c}" required="true"></apex:inputField>
+                <apex:inputField value="{!meter.Water__c}" required="true"></apex:inputField>
+                <apex:inputField value="{!meter.Electricity__c}" required="true"></apex:inputField>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Enter" action="{!saveMeter}"></apex:commandButton>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

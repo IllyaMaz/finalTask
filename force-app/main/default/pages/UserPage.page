@@ -1,0 +1,23 @@
+<apex:page controller="UserPageController" standardStylesheets="false" lightningStylesheets="true"  showHeader="false" >
+    <apex:stylesheet value="{!$Resource.SLDS}"/>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Enter new meter" action="{!redirectCreateMeter}"></apex:commandButton>
+                <apex:commandButton value="Monthly payment" action="{!redirectMonthlyPayment}"></apex:commandButton>
+                <apex:commandButton value="Change place of residence"></apex:commandButton>
+                <apex:commandButton value="Show payment history" action="{!redirectPaymentHistory}"></apex:commandButton> 
+                <apex:commandButton value="Contact manager" action="{!redirectContactManeger}"></apex:commandButton>
+            </apex:pageBlockButtons>    
+        
+            <apex:pageBlockSection >
+                
+                <apex:outputText value="{!users.User_Name__c}"></apex:outputText>
+                <apex:outputText value="{!users.State__c}"></apex:outputText>
+                <apex:outputText value="{!users.City__c}"></apex:outputText>
+                <apex:outputField value="{!users.Debt__c}"></apex:outputField>
+                <apex:outputField value="{!users.Monthly_Payment__c}"></apex:outputField>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

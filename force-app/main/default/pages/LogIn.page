@@ -1,0 +1,19 @@
+<apex:page controller="LogInUser" standardStylesheets="false" lightningStylesheets="true"  showHeader="false">
+    <apex:stylesheet value="{!$Resource.SLDS}"/>
+    <apex:form >
+    <apex:pageMessages />
+
+    <apex:pageBlock title="LogIn">
+      <apex:pageBlockSection >
+        <apex:inputText label="User Name" value="{!username}" />
+        <apex:inputSecret label="Password" value="{!password}" />
+      </apex:pageBlockSection>
+
+      <apex:pageBlockButtons location="bottom" >
+        <apex:commandButton value="LogIn" action="{!login}"/>
+        <apex:commandButton value="Registration" action="{!registration}" />
+      </apex:pageBlockButtons>
+
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>
